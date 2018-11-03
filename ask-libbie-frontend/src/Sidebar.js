@@ -35,9 +35,9 @@ export class Sidebar extends Component {
                 </li>
                 ))}
             </ul>) :
-            (<p className="no-results">No Matching Results</p>) */}
-            }
-            <p className="api-credit">Locations provided by Foursquare</p>
+            (<p className="no-results">No Matching Results</p>)
+            } */}
+            <p className="api-credit">Made with &#x2764; </p>
         </aside>
     );
   }
