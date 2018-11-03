@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Map from './Map';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import './App.css';
 
 class MainPage extends Component {
-
+    static propTypes = {
+        toggleMenu: PropTypes.func.isRequired,
+        menu: PropTypes.bool.isRequired,
+        query: PropTypes.string.isRequired
+    }
+    
     render() {
         const { query, menu, toggleMenu } = this.props;
         return (
