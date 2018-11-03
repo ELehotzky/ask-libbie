@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Form from './Form';
+
 
 export class Sidebar extends Component {
     // static propTypes = {
@@ -25,7 +27,7 @@ export class Sidebar extends Component {
             {/* {filteredPlaces.length > 0 && filteredPlaces ? (
             <ul>
                 {filteredPlaces.map( location => (
-                <li 
+                <li
                     key={location}
                     className="locations-list"
                     onClick={() => listSelect(location)}
@@ -38,6 +40,7 @@ export class Sidebar extends Component {
             (<p className="no-results">No Matching Results</p>)
             } */}
             <p className="api-credit">Made with &#x2764; </p>
+            <Form />
         </aside>
     );
   }

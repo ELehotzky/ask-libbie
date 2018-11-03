@@ -4,24 +4,25 @@ import { load_google_maps } from './GoogleMapsUtility'
 import Map from './Map';
 import Header from './Header';
 import Sidebar from './Sidebar';
+
 import './App.css';
 
 class App extends Component {
     state = {
         query: '',
         locations: [],
-        menu: false
+        menu: false,
     }
 
     componentDidMount() {
         let googleMapsPromise = load_google_maps();
-        
+
         Promise.all([
             googleMapsPromise
         ])
         .then( values => {
             let google = values[0];
-            
+
             this.google = google;
             this.markers = [];
 
@@ -29,8 +30,8 @@ class App extends Component {
                 zoom: 10,
                 center: {lat: 29.760427, lng: -95.369803},
                 scrollwheel: true
-            });   
-            
+            });
+
         })
         .catch( () => {
             //alerts user if promise fails for any of the promises
@@ -42,7 +43,7 @@ class App extends Component {
      //show or hide the menu
     toggleMenu = () => {
         const map = document.getElementById('map');
-        
+
         //add and remove classes that style the map according to whether or not the menu is displayed
         if (this.state.menu === true) {
             map.classList.remove('map-sidebar');
