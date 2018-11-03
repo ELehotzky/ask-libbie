@@ -46,7 +46,7 @@ html {
 header {
   display: grid;
   grid-template-columns: 80px 1fr;
-  background-color: #05668d;
+  background-color: #16ad41;
   height: 60px;
   width: 100vw;
 }
@@ -68,7 +68,7 @@ header h1 {
   padding: 4px;
   border-radius: 5px;
   border: 2px outset white;
-  background-color: #05668d;
+  background-color: #16ad41;
 }
 
 .menu-button:hover {
@@ -104,7 +104,7 @@ header h1 {
 #sidebar {
   position: absolute;
   z-index: 100;
-  background: #028090;
+  background: #32a287;
   width: 320px;
   max-width: 100%;
   height: calc(100vh - 60px);
@@ -158,7 +158,7 @@ ul {
 }
 
 .api-credit {
-  color: #f0f3bd;
+  color: #f1ffe7;
   font-size: 0.85rem;
   margin: 50px 0 10px 15px;
 }
