@@ -6,7 +6,6 @@ class Api::V1::ResourcesController < ApplicationController
 	end
 
 
-
 	private
 
 	def resources_params
