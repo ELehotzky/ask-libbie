@@ -40,7 +40,10 @@ export class Sidebar extends Component {
             (<p className="no-results">No Matching Results</p>)
             } */}
             <p className="api-credit">Made with &#x2764; </p>
-            <Form />
+            <Form
+            handleNewResourceChange={this.props.handleNewResourceChange} newResourceState={this.props.newResourceState}
+            addResource={this.props.addResource}
+            />
         </aside>
     );
   }
