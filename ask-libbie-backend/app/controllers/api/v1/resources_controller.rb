@@ -1,7 +1,7 @@
 class Api::V1::ResourcesController < ApplicationController
 
 	def index
-		resources = Resources.all
+		resources = Resource.all
 		render json: resources 
 	end
 
