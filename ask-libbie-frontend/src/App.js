@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import { load_google_maps } from './GoogleMapsUtility'
-import Map from './Map';
-import Header from './Header';
-import Sidebar from './Sidebar';
+import { Route } from 'react-router-dom';
+import { load_google_maps } from './GoogleMapsUtility';
+import MainPage from './MainPage';
 import './App.css';
 
 class App extends Component {
@@ -61,33 +59,14 @@ class App extends Component {
     render() {
         const { query, menu } = this.state;
         return (
-            <div className="App">
-                {/* <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                </header> */}
-                <Header toggleMenu={this.toggleMenu} />
-                <main>
-                    <Map />
-                    { menu === true &&
-                        <Sidebar
-                            query={query}
-                            // filter={ evt => {this.filter(evt.target.value)} }
-                            // filteredPlaces={filteredPlaces}
-                            // listSelect={this.listSelect}
-                        />
-                    }
-                </main>
+            <div>
+                <Route exact path="/" render={() => (
+                    <MainPage
+                        toggleMenu={this.toggleMenu}
+                        query={query}
+                        menu={menu}
+                    />
+                )}/>
             </div>
         );
     }
