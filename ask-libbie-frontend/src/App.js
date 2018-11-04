@@ -127,7 +127,5 @@ class App extends Component {
         }
       </main>
     </div>);
-  }
-}
 
 export default App;

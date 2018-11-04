@@ -20,6 +20,4 @@ class Api::V1::ResourcesController < ApplicationController
 		resources = Resource.find(params[:id])
 	end
 
-
-
 end
