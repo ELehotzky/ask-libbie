@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import edit from './edit.svg';
 
 
 export class Sidebar extends Component {
@@ -36,7 +37,15 @@ export class Sidebar extends Component {
                     >
                     {location.name}
                     <Link to="/edit-resource">
-                        <button className="edit-btn">Edit</button>
+                        <button className="edit-btn">
+                        <div className="menuImg-credit">
+                            Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                            from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                            is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 
+                            title="Creative Commons BY 3.0">CC 3.0 BY</a>
+                        </div>
+                            <img src={edit} className="edit-icon" alt=""></img>
+                        </button>
                     </Link>
                     {detailsBool === true && (
                         <div className="additional-info">
