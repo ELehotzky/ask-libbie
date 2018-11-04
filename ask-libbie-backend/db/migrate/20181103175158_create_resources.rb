@@ -10,6 +10,8 @@ class CreateResources < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :phone
       t.string :image
+      t.float :lat
+      t.float :lng
 
       t.timestamps
     end
