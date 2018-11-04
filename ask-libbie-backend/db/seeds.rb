@@ -245,154 +245,138 @@ allResources = {
 		"description": "The mission of Santa Maria Hostel is to empower women and their families to lead healthy, successful, productive and self-fulfilling lives. Santa Maria is Texas' largest multi-site residential and outpatient substance abuse treatment center and one of a very few to provide a comprehensive continuum for pregnant and parenting women and their children." 
 	}, { 
 		"name": "Harris County Protective Services for Children and Adults - Chimney Rock Center", 
-		"city": "Houston", 
 		"address": "6300 Chimney Rock",
+		"city": "Houston", 
 		"state": "TX", 
 		"zipcode": 77081, 
 		"website": "http://www.hc-ps.org/triad_prevention.htm",
 		"phone": "713-295-2600", 
 		"description": "Emergency shelter services." 
 	}, { 
-		"name": "Bonita Street House of Hope", 
-		"city": "Houston", 
-		"address": "2005 Jacquelyn",
-		"state": "TX", 
-		"zipcode": 77093, 
-		"website": "http://www.santamariahostel.org/",
-		"phone": "713-691-0900", 
-		"description": "Transitional housing with support services for persons who are homeless, chemically dependent, and ex-felons.Insurance accepted: $80.00 fee to live in shelter, with all bills paid.The Bonita Hope Transitional Housing complex consists of eight buildings with 60 apartment units" 
-	}, { 
-		"name": "Bethel Home for Women (Renewed Innovations Inc.)", 
-		"city": "Houston", 
-		"address": "2005 Jacquelyn",
-		"state": "TX", 
-		"zipcode": 77055, 
-		"website": "http://www.santamariahostel.org/",
-		"phone": "832-894-9348", 
-		"description": "Emergency Shelter / Transitional Housing for women who are homeless or faced with a crisis situation. " 
-	}, { 
 		"name": "Project Hope Recovery Center", 
+		"address": "7805 Kimble St.",
 		"city": "Houston", 
-		"address": "2005 Jacquelyn",
 		"state": "TX", 
 		"zipcode": 77017, 
-		"website": "http://www.santamariahostel.org/",
+		"website": "http://www.prohope.net/",
 		"phone": "877-491-3816", 
-		"description": "12 to 18 month residential facility for men and women struggling with life controlling situations ranging from addiction to abuse. This faith-based residential program assists individuals in recovering from drug and alcohol addiction and the life-controlling problems associated with it." 
+		"description": "12 to 18-month residential facility for men and women struggling with life controlling situations ranging from addiction to abuse. This faith-based residential program assists individuals in recovering from drug and alcohol addiction and the life-controlling problems associated with it." 
 	}, { 
 		"name": "Crossroads At Park Place, Inc.", 
 		"city": "Houston", 
-		"address": "2005 Jacquelyn",
+		"address": "3827 Broadway",
 		"state": "TX", 
 		"zipcode": 77017, 
-		"website": "http://www.santamariahostel.org/",
+		"website": "http://www.crossroadsatparkplace.org",
 		"phone": "713-252-3604", 
-		"description": "What We Do: Crossroads are open each Tuesday and Thursday from 7:00 a.m. to 1 p.m. We serve breakfast and lunch along with a generous portion of friendship. Shower facilities are available for women and men, we offer laundry services, a clothing closet, hygiene and first aid p" 
+		"description": "We serve breakfast and lunch along with a generous portion of friendship. Shower facilities are available for women and men, we offer laundry services, a clothing closet, hygiene and first aid products, haircuts, computer terminals and our community partners provide medical and social services." 
 	}, { 
 		"name": "Grace and Joy Transitional Living", 
+		"address": "6342 Ludington Dr.",
 		"city": "Houston", 
 		"state": "TX", 
 		"zipcode": 77035, 
 		"phone": "832-890-9253", 
-		"description": "Transitional Living for the elderly and disabled women we also serve disabled males as well income-based program that offers 3 meals per day educational programs and to help those to be come back productive in society" 
+		"description": "Transitional Living for the elderly and disabled women; we also serve disabled males and have an income-based program that offers 3 meals per day and educational programs." 
 	}, { 
 		"name": "Mission of Yahweh", 
+		"address": "10247 Algiers Rd.",
 		"city": "Houston", 
 		"state": "TX", 
 		"zipcode": 77041, 
+		"website": "http://www.missionofyahweh.org/",
 		"phone": "713-466-4785", 
-		"description": "Provides emergency shelter for homeless women and women and their young children. Faith-based shelter located in Houston, Texas that empowers, enriches and restores the lives of homeless women and children and provides outreach services to low income families in our neighborhood. Eligib" 
+		"description": "Provides emergency shelter for homeless women and their young children." 
 	}, { 
 		"name": "Spirit Key Transitional Housing", 
+		"address": "13617 Kaltenbrun Rd.",
 		"city": "Houston", 
 		"state": "TX", 
 		"zipcode": 77086, 
+		"website": "http://www.spiritkey.org/",
 		"phone": "281-971-0014", 
-		"description": "Transitional housing and work facility for homeless, ex-offenders and veterans. After care re-entry program.Spirit Key is a transitional work facility for men located in Houston, north Harris County. Our services include: housing, mentoring and job and life skills training.  We&nbs" 
+		"description": "Transitional housing and work facility for homeless, ex-offenders and veterans. After care re-entry program." 
 	}, { 
-		"name": "Bridge Over Troubled Water Inc", 
+		"name": "Bridge Over Troubled Water Inc.", 
+		"address": "3811 Allen-Genoa Rd.",
 		"city": "Pasadena", 
 		"state": "TX", 
 		"zipcode": 77504, 
+		"website": "http://www.thebridgeovertroubledwaters.org",
 		"phone": "713-472-0753", 
-		"description": "Hours: Monday hours 8:30 am - 5:30 am The Bridge Over Troubled Waters, Inc., (The Bridge) a comprehensive crisis center, assists survivors of domestic and/or sexual violence and those who are homeless due to these circumstances or another crisis. As the only center of its kind in south" 
+		"description": "Assists survivors of domestic and/or sexual violence and those who are homeless due to these circumstances or another crisis." 
 	}, { 
 		"name": "Sarah's House", 
+		"address": "2210 Wichita",
 		"city": "Pasadena", 
 		"state": "TX", 
 		"zipcode": 77502, 
+		"website": "http://www.thebridgeovertroubledwaters.org",
 		"phone": "713-475-1480", 
-		"description": "7 day ER Shelter, must be employed or seeking employment." 
+		"description": "7-day emergency shelter." 
 	}, { 
 		"name": "Roz House Transitional Housing For Women", 
+		"address": "11901 Meadow Pass Dr.",
 		"city": "Houston", 
 		"state": "TX", 
 		"zipcode": 77076, 
+		"website": "http://mincholbert.wix.com/rozhouse",
 		"phone": "281-405-0096", 
-		"description": "Our mission is to create a haven for women by being a place of healing and encouragement. We will be the rebirth point for their personal growth, spiritual support, economic literacy, life skills and employment resources. Transitional housing.The Roz House provides 4 bedrooms and 3 bath" 
+		"description": "The Roz House provides 4 bedrooms and 3 bathrooms that accommodate 8 women. The bedrooms are grouped around a common living area, kitchen, and private counseling area. There is an acitivity center which includes laundry facilities, computer lab, resource center and Salon on the Go." 
 	}, { 
 		"name": "FamilyTime Crisis and Counseling Center", 
+		"address": "1203 S. Houston Ave.",
 		"city": "Humble", 
 		"state": "TX", 
 		"zipcode": 77347, 
+		"website": "https://familytimeccc.org/",
 		"phone": "281-446-2615", 
-		"description": "Counseling ServicesFamilyTime offers professional counseling services for:    Individuals    Families    Couples    Teens    Group Counseling    Play Therapy for Childr" 
-	}, { 
-		"name": "Northwest Assistance Ministries", 
-		"city": "Houston", 
-		"state": "TX", 
-		"zipcode": 77090, 
-		"phone": "281-885-4575", 
-		"description": "Long term emergency (3 months) shelters for homeless families (only)." 
+		"description": "Professional counseling services for individuals, families, and children." 
 	}, { 
 		"name": "Family Promise of Lake Houston", 
+		"address": "111 South Ave. G",
 		"city": "Humble", 
 		"state": "TX", 
 		"zipcode": 77338, 
+		"website": "http://www.fplh.org/",
 		"phone": "281-441-3754", 
-		"description": " Family Promise of Lake Houston will provide a caring and positive environment for homeless children and their families while they design and execute a plan to break the cycle of homelessness in their lives. While utilizing the energy of over 2,800 community volunteers, together we are dedicate" 
-	}, { 
-		"name": "The Love House", 
-		"city": "Houston", 
-		"state": "TX", 
-		"zipcode": 77289, 
-		"phone": "832-607-1716", 
-		"description": "Shelter for ladies that are transition due to homeless or in need of a crisis intervention." 
+		"description": "We serve low-income families that become homeless due to an unfortunate circumstance, such as a fire, flood, the death of a spouse, loss of a job, an eviction, or a foreclosure of a home. Our families include infants, children, teenagers, and couples. Single men and anyone with serious psychiatric problems or those with current drug or alcohol addiction problems are not appropriate; however, we work closely with other shelters in the area to ensure that those we are unable to serve find shelter elsewhere." 
 	}, { 
 		"name": "Desire To Live Assisted Living", 
+		"address": "2220 Cr. 144",
 		"city": "Alvin", 
 		"state": "TX", 
 		"zipcode": 77511, 
+		"website": "http://www.desiretolive.org",
 		"phone": "832-512-3863", 
-		"description": "We offer transitional services for elderly and needy people. For those of you who are able to work We offer jobs temporary shelter. We will assist you in getting back on your feet! Times are extremely hard these days please do not feel alone. We are here to help!" 
+		"description": "We offer transitional services for elderly and needy people." 
 	}, { 
 		"name": "Bay Area Turning Point", 
+		"address": "210 S. Walnut",
 		"city": "Webster", 
 		"state": "TX", 
 		"zipcode": 77598, 
+		"website": "http://www.bayareaturningpoint.org/",
 		"phone": "281-286-2525", 
-		"description": "Emergency Domestic Violence Women and Children Shelter - Provides shelter to Homeless Families Victims of Domestic Violence.BATP is a non-profit; community based social service agency providing a variety of assistance services, including shelter, to families in need and community educati" 
+		"description": "Provides a variety of services to victims of Domestic Violence and their families. Services include Emergency and Transitional Shelter, Emergency Medical Care and Personal Care, Safety Planning, Legal and Financial Assistance, Support group and individual counseling, Employment Assistance, and Crisis Follow-up Services." 
 	}, { 
 		"name": "Bay Area Homeless Services", 
+		"address": "3406 Wisconsin St.",
 		"city": "Baytown", 
 		"state": "TX", 
 		"zipcode": 77520, 
+		"website": "http://bahs-shelter.org/",
 		"phone": "281-837-1654", 
-		"description": "Emergency Shelter ServicesBAHS provides emergency homeless shelter services for low-income clients in the East Harris County, Baytown, Liberty County & Chambers County area. A safe, secure, drug/alcohol-free community geared to promoting employment opportunities. We are a weapon-free campus." 
+		"description": "Bay Area Homeless Services provides housing and intensive case management services to intact homeless families who require supportive services in order to transition into more permanent housing within the community." 
 	}, { 
 		"name": "Fort Bend County Women's Center", 
+		"address": "P.O. Box 183",
 		"city": "Richmond", 
 		"state": "TX", 
 		"zipcode": 77406, 
+		"website": "http://www.fbwc.org/",
 		"phone": "281-342-4357", 
-		"description": "Emergency Domestic violence shelter for Women and Children - undisclosed locationOur services include our 24 hour crisis hotline, emergency shelter, counseling, legal and medical support and much more. We also offer community education and outreach designed to reduce domestic violence a" 
-	}, { 
-		"name": "Rescue Bank Houston", 
-		"city": "Richmond", 
-		"state": "TX", 
-		"zipcode": 77406, 
-		"phone": "281-342-4357", 
-		"description": "Emergency Domestic violence shelter for Women and Children - undisclosed locationOur services include our 24 hour crisis hotline, emergency shelter, counseling, legal and medical support and much more. We also offer community education and outreach designed to reduce domestic violence a" 
+		"description": "Our services include our 24 hour crisis hotline, emergency shelter, counseling, legal and medical support and much more. We also offer community education and outreach designed to reduce domestic violence and sexual assault." 
 	}
 	]
 }
@@ -490,9 +474,9 @@ ResourceCategory.create(resource_id: 21, category: clothing)
 ResourceCategory.create(resource_id: 22, category: shelter)
 ResourceCategory.create(resource_id: 22, category: mentally_handicapped)
 
-ResourceCategory.create(resource_id: 223, category: shelter)
-ResourceCategory.create(resource_id: 223, category: seniors)
-ResourceCategory.create(resource_id: 223, category: food)
+ResourceCategory.create(resource_id: 23, category: shelter)
+ResourceCategory.create(resource_id: 23, category: seniors)
+ResourceCategory.create(resource_id: 23, category: food)
 
 ResourceCategory.create(resource_id: 24, category: shelter)
 ResourceCategory.create(resource_id: 24, category: women)
@@ -503,76 +487,62 @@ ResourceCategory.create(resource_id: 24, category: substance)
 ResourceCategory.create(resource_id: 25, category: shelter)
 
 ResourceCategory.create(resource_id: 26, category: shelter)
-ResourceCategory.create(resource_id: 26, category: felons)
+ResourceCategory.create(resource_id: 26, category: victims)
 ResourceCategory.create(resource_id: 26, category: substance)
 
-ResourceCategory.create(resource_id: 27, category: shelter)
-ResourceCategory.create(resource_id: 27, category: women)
-ResourceCategory.create(resource_id: 27, category: victims)
+ResourceCategory.create(resource_id: 27, category: food)
+ResourceCategory.create(resource_id: 27, category: health)
+ResourceCategory.create(resource_id: 27, category: showers)
+ResourceCategory.create(resource_id: 27, category: laundry)
+ResourceCategory.create(resource_id: 27, category: clothing)
 
 ResourceCategory.create(resource_id: 28, category: shelter)
-ResourceCategory.create(resource_id: 28, category: victims)
-ResourceCategory.create(resource_id: 28, category: substance)
+ResourceCategory.create(resource_id: 28, category: seniors)
+ResourceCategory.create(resource_id: 28, category: food)
+ResourceCategory.create(resource_id: 28, category: education)
 
-ResourceCategory.create(resource_id: 29, category: food)
-ResourceCategory.create(resource_id: 29, category: health)
-ResourceCategory.create(resource_id: 29, category: showers)
-ResourceCategory.create(resource_id: 29, category: laundry)
-ResourceCategory.create(resource_id: 29, category: clothing)
+ResourceCategory.create(resource_id: 29, category: shelter)
+ResourceCategory.create(resource_id: 29, category: women)
 
 ResourceCategory.create(resource_id: 30, category: shelter)
-ResourceCategory.create(resource_id: 30, category: seniors)
-ResourceCategory.create(resource_id: 30, category: food)
+ResourceCategory.create(resource_id: 30, category: felons)
+ResourceCategory.create(resource_id: 30, category: veterans)
+ResourceCategory.create(resource_id: 30, category: men)
 ResourceCategory.create(resource_id: 30, category: education)
+ResourceCategory.create(resource_id: 30, category: career)
 
 ResourceCategory.create(resource_id: 31, category: shelter)
-ResourceCategory.create(resource_id: 31, category: women)
+ResourceCategory.create(resource_id: 31, category: victims)
 
 ResourceCategory.create(resource_id: 32, category: shelter)
-ResourceCategory.create(resource_id: 32, category: felons)
-ResourceCategory.create(resource_id: 32, category: veterans)
-ResourceCategory.create(resource_id: 32, category: men)
-ResourceCategory.create(resource_id: 32, category: education)
-ResourceCategory.create(resource_id: 32, category: career)
 
 ResourceCategory.create(resource_id: 33, category: shelter)
-ResourceCategory.create(resource_id: 33, category: victims)
+ResourceCategory.create(resource_id: 33, category: women)
+ResourceCategory.create(resource_id: 33, category: career)
+ResourceCategory.create(resource_id: 33, category: education)
 
-ResourceCategory.create(resource_id: 34, category: shelter)
+ResourceCategory.create(resource_id: 34, category: health)
+ResourceCategory.create(resource_id: 34, category: teens)
 
 ResourceCategory.create(resource_id: 35, category: shelter)
-ResourceCategory.create(resource_id: 35, category: women)
-ResourceCategory.create(resource_id: 35, category: career)
-ResourceCategory.create(resource_id: 35, category: education)
+ResourceCategory.create(resource_id: 35, category: teens)
 
-ResourceCategory.create(resource_id: 36, category: health)
-ResourceCategory.create(resource_id: 36, category: teens)
+ResourceCategory.create(resource_id: 36, category: shelter)
+ResourceCategory.create(resource_id: 36, category: seniors)
+ResourceCategory.create(resource_id: 36, category: mentally_handicapped)
 
 ResourceCategory.create(resource_id: 37, category: shelter)
+ResourceCategory.create(resource_id: 37, category: women)
+ResourceCategory.create(resource_id: 37, category: victims)
 
 ResourceCategory.create(resource_id: 38, category: shelter)
-ResourceCategory.create(resource_id: 38, category: teens)
+ResourceCategory.create(resource_id: 38, category: seniors)
+ResourceCategory.create(resource_id: 38, category: mentally_handicapped)
 
 ResourceCategory.create(resource_id: 39, category: shelter)
 ResourceCategory.create(resource_id: 39, category: women)
+ResourceCategory.create(resource_id: 39, category: legal)
 ResourceCategory.create(resource_id: 39, category: victims)
-
-ResourceCategory.create(resource_id: 40, category: shelter)
-ResourceCategory.create(resource_id: 40, category: seniors)
-ResourceCategory.create(resource_id: 40, category: mentally_handicapped)
-
-ResourceCategory.create(resource_id: 41, category: shelter)
-ResourceCategory.create(resource_id: 41, category: women)
-ResourceCategory.create(resource_id: 41, category: victims)
-
-ResourceCategory.create(resource_id: 42, category: shelter)
-ResourceCategory.create(resource_id: 42, category: seniors)
-ResourceCategory.create(resource_id: 42, category: mentally_handicapped)
-
-ResourceCategory.create(resource_id: 43, category: shelter)
-ResourceCategory.create(resource_id: 43, category: women)
-ResourceCategory.create(resource_id: 43, category: legal)
-ResourceCategory.create(resource_id: 43, category: victims)
 
 
 
