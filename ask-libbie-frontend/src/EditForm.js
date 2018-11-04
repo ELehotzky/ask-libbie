@@ -6,25 +6,30 @@ import Header from './Header';
       }
 
       render() {
-        const { filteredPlaces, editFormData } = this.props
+        const { filteredPlaces, editFormData, getMoreFormData } = this.props;
       return (
           <div>
             <Header />
-            <main>
+            <main
+                onLoad={getMoreFormData(filteredPlaces, editFormData)}
+            >
                 <form
                     className="main-form"
                     onSubmit={(e) => this.props.addResource(e, this.props.newResourceState)
                 }>
                     <label className="form-label">
-                    {console.log(filteredPlaces[editFormData].name)}
+                    {/* {console.log(filteredPlaces[editFormData].name)} */}
                         Resource Name:
                         <input
+                        onChange={this.props.entry}
                         className="form-input"
                         id="name" 
                         name="name" 
                         type="text"
-                        value={filteredPlaces[editFormData].name}
-                        onChange={(e) => this.props.handleNewResourceChange(e)} 
+                        // value={filteredPlaces[editFormData].name}
+                        value={this.props.entry}
+                        // onChange={(e) => this.props.handleNewResourceChange(e)}
+                        onChange={this.props.onChange}
                         />
                     </label>
                     <label className="form-label">
