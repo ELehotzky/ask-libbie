@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Map from './Map';
-import Header from './Header';
+import MainHeader from './MainHeader';
 import Sidebar from './Sidebar';
 import './App.css';
 
@@ -14,18 +13,20 @@ class MainPage extends Component {
     }
     
     render() {
-        const { query, menu, toggleMenu } = this.props;
+        const { query, menu, toggleMenu, filter, filteredPlaces, listSelect, detailsBool, match } = this.props;
         return (
             <div className="App">
-                <Header toggleMenu={toggleMenu} />
+                <MainHeader toggleMenu={toggleMenu} />
                 <main>
                     <Map />
                     { menu === true &&
                         <Sidebar
                             query={query}
-                            // filter={ evt => {this.filter(evt.target.value)} }
-                            // filteredPlaces={filteredPlaces}
-                            // listSelect={this.listSelect}
+                            filter={filter}
+                            filteredPlaces={filteredPlaces}
+                            listSelect={listSelect}
+                            detailsBool={detailsBool}
+                            match={match}
                         />
                     }
                 </main>

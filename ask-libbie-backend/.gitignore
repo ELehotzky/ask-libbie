@@ -21,3 +21,12 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#Lou's special ignores for custom backend
+Gemfile
+Gemfile.lock
+app/controllers/api/v1/resources_controlller.rb
+/config/database.yml
+/db/database.yml
+/db/migrate/20181103175158_create_resources.rb
+/db/schema.rb
