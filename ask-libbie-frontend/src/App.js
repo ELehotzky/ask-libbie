@@ -15,9 +15,12 @@ class App extends Component {
     locationsCopy: [],
     editFormTest: '',
     editFormData: 0,
+    moreFormData: {},
     menu: false,
     newResource: {},
-    detailsBool: false
+    detailsBool: false,
+    entry: '',
+    initialValueBool: false
   }
 
     componentDidMount() {
@@ -161,6 +164,7 @@ class App extends Component {
   pushDataToForm = () => {
     // let marker = this.markers;
     const { locationsCopy , editFormTest, editFormData } = this.state;
+    
     for(let i= 0; i < locationsCopy.length; i++) {
       if (editFormTest === locationsCopy[i].name ) {
         let num = i;
@@ -169,6 +173,25 @@ class App extends Component {
         console.log("editFormData: " + editFormData)
       }
     }
+  }
+
+  getMoreFormData = (data, num) => {
+    // console.log("my data: " + data);
+    // console.log("my num: " + num);
+    setTimeout(() => {
+      console.log("combined: " + data[num]);
+      let completeData = data[num];
+      this.setState({ moreFormData: completeData })
+      
+      const { initialValueBool, moreFormData } = this.state;
+      if ( initialValueBool === false) {
+        this.setState({ 
+          entry: moreFormData.name,
+          initialValueBool: true
+        });
+      }
+      console.log("moreFormData: " + this.state.moreFormData.name);
+    }, 2500)
   }
 
   //show or hide the menu
@@ -292,6 +315,10 @@ class App extends Component {
         .then(console.log())
   }
 
+  handleEntry = entry => {
+      this.setState({ entry: entry });
+}
+
     render() {
         const { query, menu, newResource, locationsCopy, detailsBool, editFormData } = this.state;
         return (
@@ -323,6 +350,9 @@ class App extends Component {
                     filteredPlaces={locationsCopy}
                     pushDataToForm={this.pushDataToForm}
                     editFormData={editFormData}
+                    getMoreFormData={this.getMoreFormData}
+                    entry={this.state.entry}
+                    onChange={ evt => this.handleEntry(evt.target.value) }
                   />
                 )}/>
             </div>
