@@ -11,7 +11,7 @@ class MainPage extends Component {
         menu: PropTypes.bool.isRequired,
         query: PropTypes.string.isRequired
     }
-    
+
     render() {
         const { query, menu, toggleMenu, filter, filteredPlaces, listSelect, detailsBool, match } = this.props;
         return (
@@ -21,6 +21,7 @@ class MainPage extends Component {
                     <Map />
                     { menu === true &&
                         <Sidebar
+                        handleSelectEditResource={this.props.handleSelectEditResource}
                             query={query}
                             filter={filter}
                             filteredPlaces={filteredPlaces}
