@@ -13,7 +13,7 @@ class Api::V1::ResourcesController < ApplicationController
 	private
 
 	def resources_params
-		params.permit(:name, :address, :city, :state, :zipcode, :website, :description, :phone, :image)
+		params.permit(:name, :address, :city, :state, :zipcode, :website, :description, :phone, :image, :lat, :lng)
 	end
 
 	def find_resource

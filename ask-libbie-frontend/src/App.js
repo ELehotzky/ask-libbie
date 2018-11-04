@@ -14,9 +14,10 @@ class App extends Component {
   }
 
     componentDidMount() {
+
         let googleMapsPromise = load_google_maps();
-        let g = apiData();
-        
+        let g = this.getResources();
+
         Promise.all([
             googleMapsPromise,
             g
@@ -26,7 +27,7 @@ class App extends Component {
             let data = values[1];
 
             console.log(data);
-            
+
             this.google = google;
             this.markers = [];
 
@@ -34,8 +35,8 @@ class App extends Component {
                 zoom: 10,
                 center: {lat: 29.760427, lng: -95.369803},
                 scrollwheel: true
-            });   
-            
+            });
+
         })
         .catch( () => {
             //alerts user if promise fails for any of the promises
@@ -94,7 +95,67 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/resources/')
     .then(console.log())
     .then(res => res.json())
-    .then(resources => console.log(resources))
+    // .then(resources => this.cleanLocation(resources))
+  }
+
+  // get address from user input and call cleanLocation
+  cleanLocation = (resources) => {
+    console.log(resources)
+    // dynamically get address, city, state from getResources fetch
+
+    // its an array
+
+    // convert string to an array
+    const address = '123 Main St.'
+    const city = 'Houston'
+    const state = 'TX'
+
+    let cleanAdd = address.split(" ")
+    cleanAdd = cleanAdd.join("+") + ","
+
+    let cleanCity = city.split(" ")
+    cleanCity = "+" + cleanCity.join("+") + ","
+
+    let cleanState = state.split(" ")
+    cleanState = "+" + cleanState
+
+    const formatAddress = cleanAdd + cleanCity + cleanState
+    console.log(formatAddress)
+
+    this.getLatLng(formatAddress)
+  }
+
+  getLatLng = (formatAddress) => {
+    let lat
+    let lng
+    // https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+    const YOUR_API_KEY = 'AIzaSyDJMqZM25hyGg92ZEqRI669XlS8u5j14Ic';
+    // console.log(`https://maps.googleapis.com/maps/api/geocode/json?address=${formatAddress}&key=${YOUR_API_KEY}`)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${formatAddress}&key=${YOUR_API_KEY}`)
+    // .then(console.log)
+    .then(res => res.json())
+    .then(data => {
+      lat = data.results[0].geometry.location.lat
+      lng = data.results[0].geometry.location.lng
+      console.log(lat,lng)
+      // check if lat lng already exists should only run once
+      this.postLocation(lat,lng)
+    })
+  }
+
+  postLocation = (lat,lng) => {
+    // fetch('http://localhost:3000/api/v1/resources/', {
+    //       method: "POST",
+    //       body: JSON.stringify({
+    //           lat: lat,
+    //           lng: lng
+    //         }),
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       }
+    //     })
+    //   .then(console.log)
+      // console.log(lat,lng)
   }
 
   addResource = (e, newResource) => {
@@ -125,7 +186,7 @@ class App extends Component {
                         menu={menu}
                         handleNewResourceChange={this.handleNewResourceChange} newResourceState={this.state.newResource}
               addResource={this.addResource}
-              
+
                     />
                 )}/>
             </div>
