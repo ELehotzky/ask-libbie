@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
 import Header from './Header';
+
   class EditForm extends Component {
-      componentDidMount() {
-          this.props.pushDataToForm();
-      }
 
       render() {
-        const { filteredPlaces, editFormData } = this.props
+        console.log(this.props.editResourceState)
+        // const { filteredPlaces, editFormData, editResourceState } = this.props
       return (
           <div>
             <Header />
             <main>
                 <form
                     className="main-form"
-                    onSubmit={(e) => this.props.addResource(e, this.props.newResourceState)
+                    onSubmit={(e) => this.props.editResource(e, this.props.editResourceState)
                 }>
                     <label className="form-label">
-                    {console.log(filteredPlaces[editFormData].name)}
                         Resource Name:
                         <input
                         className="form-input"
-                        id="name" 
-                        name="name" 
+                        id="name"
+                        name="name"
                         type="text"
-                        value={filteredPlaces[editFormData].name}
-                        onChange={(e) => this.props.handleNewResourceChange(e)} 
+                        value={this.props.editResourceState.name}
+                        onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
@@ -32,82 +30,82 @@ import Header from './Header';
                         <input
                             className="form-input"
                             id="address"
-                            name="address" 
-                            type="text" 
-                            value={filteredPlaces[editFormData].address}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            name="address"
+                            type="text"
+                            value={this.props.editResourceState.address}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         City:
                         <input
                             className="form-input"
-                            id="city" 
-                            name="city" 
-                            type="text" 
-                            value={filteredPlaces[editFormData].city}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            id="city"
+                            name="city"
+                            type="text"
+                            value={this.props.editResourceState.city}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         State:
                         <input
                             className="form-input"
-                            id="state" 
-                            name="state" 
-                            type="text"  
-                            value={filteredPlaces[editFormData].state}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            id="state"
+                            name="state"
+                            type="text"
+                            value={this.props.editResourceState.state}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         Zipcode:
                         <input
                             className="form-input"
-                            id="zipcode" 
-                            name="zipcode" 
+                            id="zipcode"
+                            name="zipcode"
                             type="number"
-                            value={filteredPlaces[editFormData].zipcode}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            value={this.props.editResourceState.zipcode}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         Website:
                         <input
                             className="form-input"
-                            id="website" 
-                            name="website" 
+                            id="website"
+                            name="website"
                             type="text"
-                            value={filteredPlaces[editFormData].website}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            value={this.props.editResourceState.website}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         Description:
                         <input
                             className="form-input"
-                            id="description" 
+                            id="description"
                             name="description"
                             type="text"
-                            value={filteredPlaces[editFormData].description}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            value={this.props.editResourceState.description}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <label className="form-label">
                         Phone:
                         <input
                             className="form-input"
-                            id="phone" 
-                            name="phone" 
+                            id="phone"
+                            name="phone"
                             type="text"
-                            value={filteredPlaces[editFormData].phone}
-                            onChange={(e) => this.props.handleNewResourceChange(e)} 
+                            value={this.props.editResourceState.phone}
+                            onChange={(e) => this.props.handleEditResourceChange(e)}
                         />
                     </label>
                     <div className='clearfix'></div>
                     <div className="form-group mx-sm-3">
-                    <button className="btn btn-primary" onClick={(e) => this.props.addResource(e, this.props.newResourceState)}>Save</button>
-                    <button className="btn btn-primary" onClick={() =>console.log("Cancel")}>Cancel</button>
+                    <button className="btn btn-primary" onClick={(e) => this.props.editResource(e, this.props.editResourceState)}>Save</button>
+                    <button className="btn btn-primary" onClick={(e) => this.props.deleteResource(e, this.props.editResourceState)}>Delete</button>
                     </div>
                     <hr/>
                 </form>

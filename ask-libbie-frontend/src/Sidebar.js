@@ -36,10 +36,10 @@ export class Sidebar extends Component {
                     >
                     {location.name}
                     <Link to="/edit-resource">
-                        <button className="edit-btn">Edit</button>
+                        <button className="edit-btn" onClick={()=> this.props.handleSelectEditResource(location.id)} >Edit</button>
                     </Link>
                     {detailsBool === true && (
-                        <div className="additional-info">
+                        <div className="additional-info" >
                             <p>{location.description}</p>
                             <p>Address: {location.address} {location.city}, {location.state} {location.zipcode}</p>
                             <p>Phone #: {location.phone}</p>
