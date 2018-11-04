@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Form from './Form';
 
 
 export class Sidebar extends Component {
@@ -40,10 +39,6 @@ export class Sidebar extends Component {
             (<p className="no-results">No Matching Results</p>)
             } */}
             <p className="api-credit">Made with &#x2764; </p>
-            <Form
-            handleNewResourceChange={this.props.handleNewResourceChange} newResourceState={this.props.newResourceState}
-            addResource={this.props.addResource}
-            />
         </aside>
     );
   }
