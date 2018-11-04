@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { load_google_maps } from './GoogleMapsUtility';
 import { apiData } from './API-Data';
 import MainPage from './MainPage';
+import Form from './Form';
 import './App.css';
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
 
     componentDidMount() {
         let googleMapsPromise = load_google_maps();
-        let g = apiData();
+        let g = this.getResources();
         
         Promise.all([
             googleMapsPromise,
@@ -34,28 +35,11 @@ class App extends Component {
                 zoom: 10,
                 center: {lat: 29.760427, lng: -95.369803},
                 scrollwheel: true
-            });   
-            
-        })
-        .catch( () => {
-            //alerts user if promise fails for any of the promises
-            alert('One or more resources could not be retrieved. This app will not be fully functional until all network resources are successfully retrieved.');
-        });
+            });
 
-    Promise.all([googleMapsPromise]).then(values => {
-      let google = values[0];
-
-      this.google = google;
-      this.markers = [];
-
-      this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: {
-          lat: 29.760427,
-          lng: -95.369803
-        },
-        scrollwheel: true
-      });
+            data.map(value => {
+                // this.apiData(pathtoaddressfromobject).then()
+            })
 
     }).catch(() => {
       //alerts user if promise fails for any of the promises
@@ -90,11 +74,21 @@ class App extends Component {
     },() => console.log(this.state))
   }
 
+    apiData = (location) => {
+        const key = 'AIzaSyDJMqZM25hyGg92ZEqRI669XlS8u5j14Ic';
+        const address = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${key}`
+        return fetch(address)
+            .then( res => res.json())
+            .catch( err => {
+                console.log(err);
+            });
+    }
+
   getResources = () => {
     fetch('http://localhost:3000/api/v1/resources/')
     .then(console.log())
     .then(res => res.json())
-    .then(resources => console.log(resources))
+    // .then(resources => console.log(resources))
   }
 
   addResource = (e, newResource) => {
@@ -115,7 +109,7 @@ class App extends Component {
   }
 
     render() {
-        const { query, menu } = this.state;
+        const { query, menu, newResource } = this.state;
         return (
             <div>
                 <Route exact path="/" render={() => (
@@ -123,10 +117,14 @@ class App extends Component {
                         toggleMenu={this.toggleMenu}
                         query={query}
                         menu={menu}
-                        handleNewResourceChange={this.handleNewResourceChange} newResourceState={this.state.newResource}
-              addResource={this.addResource}
-              
                     />
+                )}/>
+                <Route exact path="/add-resource" render={()=> (
+                  <Form
+                    handleNewResourceChange={this.handleNewResourceChange} 
+                    newResourceState={newResource}
+                    addResource={this.addResource}
+                  />
                 )}/>
             </div>
         );
