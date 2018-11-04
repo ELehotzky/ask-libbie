@@ -14,25 +14,25 @@ export class MainHeader extends Component {
     return (
         <header>
           <button aria-label="Menu" className="menu-button" onClick={() => toggleMenu()}>
-          <div className="menuImg-credit">
+          {/* <div className="menuImg-credit">
             Icons made by 
             <a href="https://www.flaticon.com/authors/cole-bemis" title="Cole Bemis">Cole Bemis</a> 
             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC 3.0 BY</a>
-          </div>
+          </div> */}
             <img src={menu} className="menu-icon" alt=""></img>
           </button>
           <h1>Ask Libbie</h1>
           <Link to="/add-resource">
             <button className="add-resource-btn">
-            <div className="menuImg-credit">
+            {/* <div className="menuImg-credit">
                 Icons made by <a href="https://www.flaticon.com/authors/minh-hoang" 
                 title="Minh Hoang">Minh Hoang</a>
                 from <a href="https://www.flaticon.com/"
                 title="Flaticon">www.flaticon.com</a> 
                 is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 
                 title="Creative Commons BY 3.0">CC 3.0 BY</a>
-            </div>
+            </div> */}
                 <img src={plusButton} className="menu-icon" alt=""></img>
             </button>
           </Link>
