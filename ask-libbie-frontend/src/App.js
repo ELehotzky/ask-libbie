@@ -146,6 +146,54 @@ filter = query => {
   return null;
 }
 
+//   pushDataToForm = () => {
+//     // let marker = this.markers;
+//     const { locationsCopy , editFormTest, editFormData } = this.state;
+    
+//     for(let i= 0; i < locationsCopy.length; i++) {
+//       if (editFormTest === locationsCopy[i].name ) {
+//         let num = i;
+//         console.log("num: " + num)
+//         this.setState({ editFormData: num })
+//         console.log("editFormData: " + editFormData)
+//       }
+//     }
+//   }
+
+//   getMoreFormData = (data, num) => {
+//     // console.log("my data: " + data);
+//     // console.log("my num: " + num);
+//     setTimeout(() => {
+//       console.log("combined: " + data[num]);
+//       let completeData = data[num];
+//       this.setState({ moreFormData: completeData })
+      
+//       const { initialValueBool, moreFormData } = this.state;
+//       if ( initialValueBool === false) {
+//         this.setState({ 
+//           entry: moreFormData.name,
+//           initialValueBool: true
+//         });
+//       }
+//       console.log("moreFormData: " + this.state.moreFormData.name);
+//     }, 2500)
+//   }
+
+  //show or hide the menu
+  toggleMenu = () => {
+    const map = document.getElementById('map');
+
+    //add and remove classes that style the map according to whether or not the menu is displayed
+    if (this.state.menu === true) {
+      map.classList.remove('map-sidebar');
+      map.classList.add('map');
+    } else {
+      map.classList.remove('map');
+      map.classList.add('map-sidebar');
+    }    //change state of filterMenu boolean based on it's current state which toggles menu rendering
+      return this.state.menu === true
+      ? this.setState({menu: false})
+      : this.setState({menu: true});
 
 //when a list item is clicked the corresponding marker is selected
 listSelect = selected => {
@@ -357,6 +405,10 @@ deleteResource = (e, deleteResource) => {
     .then(console.log())
 }
 
+  handleEntry = entry => {
+      this.setState({ entry: entry });
+}
+
     render() {
         const { query, menu, newResource, editResource, locationsCopy, detailsBool, editFormData } = this.state;
         return (
@@ -390,6 +442,9 @@ deleteResource = (e, deleteResource) => {
                     deleteResource={this.deleteResource}
                     filteredPlaces={locationsCopy}
                     editFormData={editFormData}
+                    getMoreFormData={this.getMoreFormData}
+                    entry={this.state.entry}
+                    onChange={ evt => this.handleEntry(evt.target.value) }
                   />
                 )}/>
             </div>

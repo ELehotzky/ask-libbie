@@ -4,12 +4,13 @@ import Header from './Header';
   class EditForm extends Component {
 
       render() {
-        console.log(this.props.editResourceState)
-        // const { filteredPlaces, editFormData, editResourceState } = this.props
+        const { filteredPlaces, editFormData, getMoreFormData } = this.props;
       return (
           <div>
             <Header />
-            <main>
+            <main
+                onLoad={getMoreFormData(filteredPlaces, editFormData)}
+            >
                 <form
                     className="main-form"
                     onSubmit={(e) => this.props.editResource(e, this.props.editResourceState)
@@ -17,6 +18,7 @@ import Header from './Header';
                     <label className="form-label">
                         Resource Name:
                         <input
+                        onChange={this.props.entry}
                         className="form-input"
                         id="name"
                         name="name"
