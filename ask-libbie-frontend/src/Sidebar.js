@@ -37,7 +37,7 @@ export class Sidebar extends Component {
                     >
                     {location.name}
                     <Link to="/edit-resource">
-                        <button className="edit-btn">
+                        <button className="edit-btn" onClick={()=> this.props.handleSelectEditResource(location.id)} >Edit</button>
                         <div className="menuImg-credit">
                             Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
                             from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
@@ -48,7 +48,7 @@ export class Sidebar extends Component {
                         </button>
                     </Link>
                     {detailsBool === true && (
-                        <div className="additional-info">
+                        <div className="additional-info" >
                             <p>{location.description}</p>
                             <p>Address: {location.address} {location.city}, {location.state} {location.zipcode}</p>
                             <p>Phone #: {location.phone}</p>
