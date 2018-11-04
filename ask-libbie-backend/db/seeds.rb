@@ -543,14 +543,3 @@ ResourceCategory.create(resource_id: 39, category: shelter)
 ResourceCategory.create(resource_id: 39, category: women)
 ResourceCategory.create(resource_id: 39, category: legal)
 ResourceCategory.create(resource_id: 39, category: victims)
-
-
-
-
-
-
-
-
-
-
-

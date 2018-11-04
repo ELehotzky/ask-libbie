@@ -2,9 +2,13 @@ class Api::V1::ResourcesController < ApplicationController
 
 	def index
 		resources = Resource.all
-		render json: resources 
+		render json: resources
 	end
 
+	def create
+		resource = Resource.create(resources_params)
+		render json: resource
+	end
 
 	private
 
@@ -15,7 +19,5 @@ class Api::V1::ResourcesController < ApplicationController
 	def find_resource
 		resources = Resource.find(params[:id])
 	end
-
-
 
 end
