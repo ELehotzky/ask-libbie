@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2018_11_03_175338) do
     t.string "description"
     t.string "phone"
     t.string "image"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
