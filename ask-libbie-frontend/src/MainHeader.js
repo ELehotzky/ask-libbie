@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import menu from './menu.svg';
+import plusButton from './plusButton.svg';
 import PropTypes from 'prop-types';
 
 export class MainHeader extends Component {
@@ -24,7 +25,15 @@ export class MainHeader extends Component {
           <h1>Ask Libbie</h1>
           <Link to="/add-resource">
             <button className="add-resource-btn">
-                Add Resource
+            <div className="menuImg-credit">
+                Icons made by <a href="https://www.flaticon.com/authors/minh-hoang" 
+                title="Minh Hoang">Minh Hoang</a>
+                from <a href="https://www.flaticon.com/"
+                title="Flaticon">www.flaticon.com</a> 
+                is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 
+                title="Creative Commons BY 3.0">CC 3.0 BY</a>
+            </div>
+                <img src={plusButton} className="menu-icon" alt=""></img>
             </button>
           </Link>
         </header>
