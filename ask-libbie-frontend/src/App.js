@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { load_google_maps } from './GoogleMapsUtility';
+import { apiData } from './API-Data';
 import MainPage from './MainPage';
 import './App.css';
 
@@ -13,12 +14,17 @@ class App extends Component {
 
     componentDidMount() {
         let googleMapsPromise = load_google_maps();
+        let g = apiData();
         
         Promise.all([
-            googleMapsPromise
+            googleMapsPromise,
+            g
         ])
         .then( values => {
             let google = values[0];
+            let data = values[1];
+
+            console.log(data);
             
             this.google = google;
             this.markers = [];
