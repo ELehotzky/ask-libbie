@@ -16,6 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.getResources()
     let googleMapsPromise = load_google_maps();
 
     Promise.all([googleMapsPromise]).then(values => {
@@ -68,6 +69,13 @@ class App extends Component {
     },() => console.log(this.state))
   }
 
+  getResources = () => {
+    fetch('http://localhost:3000/api/v1/resources/')
+    .then(console.log())
+    .then(res => res.json())
+    .then(resources => console.log(resources))
+  }
+
   addResource = (e, newResource) => {
     console.log(e, newResource)
     e.preventDefault()
@@ -114,6 +122,7 @@ class App extends Component {
               // listSelect={this.listSelect}
               handleNewResourceChange={this.handleNewResourceChange} newResourceState={this.state.newResource}
               addResource={this.addResource}
+              
               />
         }
       </main>

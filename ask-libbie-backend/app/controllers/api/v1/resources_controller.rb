@@ -1,11 +1,14 @@
 class Api::V1::ResourcesController < ApplicationController
 
 	def index
-		resources = Resources.all
-		render json: resources 
+		resources = Resource.all
+		render json: resources
 	end
 
-
+	def create
+		resource = Resource.create(resources_params)
+		render json: resource
+	end
 
 	private
 
