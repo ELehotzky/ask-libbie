@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: ask-libbie_production
-  username: ask-libbie
-  password: <%= ENV['ASK-LIBBIE_DATABASE_PASSWORD'] %>
+  username: postgre
+  password: n9fgTFTdxvGL
+  host: 35.224.181.20
