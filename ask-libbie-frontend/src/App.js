@@ -82,7 +82,7 @@ class App extends Component {
           
           //this event listener handles creating info window and map events on click of map marker
           google.maps.event.addListener(marker, 'click', () => {
-            this.infowindow.setContent(`<div class="info"><p>${marker.name}</p> <p>${marker.addr}</p> <p><a href="${marker.website}">Visit Site</a></p></div>`);
+            this.infowindow.setContent(`<div class="info"><p>${marker.name}</p> <p>${marker.addr}</p> <p><a target="_blank" href="${marker.website}">Visit Site</a></p></div>`);
             this.map.setZoom(14);
             this.map.setCenter(marker.position);
             this.infowindow.open(this.map, marker);
