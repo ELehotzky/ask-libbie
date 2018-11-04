@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
@@ -11,33 +12,45 @@ export class Sidebar extends Component {
     // }
 
   render() {
-    // const { filteredPlaces, query, filter, listSelect } = this.props;
+    const { filteredPlaces, query, filter, listSelect, detailsBool, match } = this.props;
     return (
         <aside id="sidebar">
             <input
                 type="text"
                 name="Filter Locations"
-                // value={query}
-                // onChange={filter}
+                value={query}
+                onChange={filter}
                 placeholder="Filter Locations"
                 className="search"
             />
             {/* ternary only renders list if it exists and is greater then 0. Otherwise paragraph is rendered */}
-            {/* {filteredPlaces.length > 0 && filteredPlaces ? (
+            {filteredPlaces.length > 0 && filteredPlaces ? (
             <ul>
-                {filteredPlaces.map( location => (
-                <li
-                    key={location}
+                {/* {console.log(filteredPlaces)} */}
+                {filteredPlaces.map( (location, index) => (
+                    <li
+                    key={location.name}
                     className="locations-list"
-                    onClick={() => listSelect(location)}
+                    onClick={() => listSelect(location.name)}
                     tabIndex="0"
-                >
-                    {location}
+                    >
+                    {location.name}
+                    <Link to="/edit-resource">
+                        <button className="edit-btn">Edit</button>
+                    </Link>
+                    {detailsBool === true && (
+                        <div className="additional-info">
+                            <p>{location.description}</p>
+                            <p>Address: {location.address} {location.city}, {location.state} {location.zipcode}</p>
+                            <p>Phone #: {location.phone}</p>
+                            <p><a href={location.website}>Visit Site</a></p>
+                        </div>
+                    )}
                 </li>
                 ))}
             </ul>) :
             (<p className="no-results">No Matching Results</p>)
-            } */}
+            }
             <p className="api-credit">Made with &#x2764; </p>
         </aside>
     );

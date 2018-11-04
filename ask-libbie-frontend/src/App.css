@@ -12,7 +12,7 @@ html {
 
 header {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 80px 1fr 80px;
   background-color: #16ad41;
   height: 60px;
   width: 100vw;
@@ -50,6 +50,10 @@ header h1 {
 
 .menu-icon {
   height: 40px;
+}
+
+.add-resource-btn {
+  margin-right: 20px;
 }
 
 .map {
@@ -116,6 +120,28 @@ ul {
   border: 3px inset black;
 }
 
+.edit-btn {
+  padding: 4px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.edit-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.additional-info {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 0.83rem;
+  text-align: left;
+}
+
 .no-results {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.3rem;
@@ -134,6 +160,29 @@ ul {
   display: none;
 }
 
+.main-form {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+}
+
+.form-label {
+  display: block;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.form-input {
+  /* display: block; */
+  height: 30px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 20px;
+  /* margin-bottom: 30px; */
+}
+
 @media only screen and (min-width: 48em) {
   header h1 {
     font-size: 1.5rem;
@@ -143,7 +192,7 @@ ul {
     left: 320px;
   }
 
-  #sidebar {
+  /* #sidebar {
     overflow-y: hidden;
-  }
+  } */
 }
