@@ -21,6 +21,7 @@ class MainPage extends Component {
                     <Map />
                     { menu === true &&
                         <Sidebar
+                        handleFilterTerm={this.props.handleFilterTerm}
                         handleSelectEditResource={this.props.handleSelectEditResource}
                             query={query}
                             filter={filter}

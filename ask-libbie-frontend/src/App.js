@@ -10,7 +10,7 @@ import './App.css';
 
 class App extends Component {
 state = {
-  query: '',
+  query: "",
   locations: [],
   locationsCopy: [],
   editFormTest: '',
@@ -98,12 +98,12 @@ parseResources = (resources) => {
       });
 
       //setting original locations array based on each place returned from the api
-      this.setState(prevState => ({
-        locations: [
-          ...prevState.locations,
-          location
-        ]
-      }));
+      // this.setState(prevState => ({
+      //   locations: [
+      //     ...prevState.locations,
+      //     location
+      //   ]
+      // }));
 
       //this event listener handles creating info window and map events on click of map marker
       google.maps.event.addListener(marker, 'click', () => {
@@ -120,20 +120,58 @@ parseResources = (resources) => {
 
     //this makes a copy of locations array
     this.setState({locationsCopy: this.state.locations});
-  }).catch(() => {
+  })
+  .catch(() => {
     //alerts user if promise fails for any of the promises
     alert('One or more resources could not be retrieved. This app will not be fully functional until all network resources are successfully retrieved.');
-  });
+  },()=>console.log(this.state));
+}
+
+handleFilterTerm = (filterTerm) => {
+  this.setState({
+    query: filterTerm
+  })
 }
 
 
+filter = query => {
+ //show only locations on the list that contain characters within the query
+ let filteredLocations = this.state.locations.filter(location => {
+   return location.name.toLowerCase().includes(query.toLowerCase());
+ });
+
+ //show only markers on map that contain characters  of the name within the query
+ this.markers.filter(marker => {
+   return marker.name.toLowerCase().includes(query.toLowerCase()) === true
+     ? marker.setVisible(true)
+     : marker.setVisible(false);
+ });
+
+ //set copy of filtered places array to only display matching names
+ this.setState({locationsCopy: filteredLocations, query});
+ return null;
+}
+
 //function for filtering current list of places on map.
 filter = query => {
-  //show only locations on the list that contain characters within the query
-  let filteredLocations = this.state.locations.filter(location => {
-    return location.name.toLowerCase().includes(query.toLowerCase());
-  });
+  console.log(this.state.locations)
+  console.log(this.state.query)
+  // debugger
 
+  return this.state.query !=="" ?
+  this.state.locations.filter(location => {
+      return (
+        location.name.toLowerCase().includes(this.state.query.toLowerCase())
+      )
+    }) : this.state.locations
+
+  //show only locations on the list that contain characters within the query
+  // let filteredLocations = this.state.locations.filter(location => {
+  //   console.log(query)
+    // return location.name.toLowerCase().includes(query.toLowerCase());
+  // });
+
+  console.log(this.markers)
   //show only markers on map that contain characters  of the name within the query
   this.markers.filter(marker => {
     return marker.name.toLowerCase().includes(query.toLowerCase()) === true
@@ -142,7 +180,7 @@ filter = query => {
   });
 
   //set copy of filtered places array to only display matching names
-  this.setState({locationsCopy: filteredLocations, query});
+  // this.setState({locationsCopy: filteredLocations, query});
   return null;
 }
 
@@ -416,14 +454,15 @@ deleteResource = (e, deleteResource) => {
                 <Route exact path="/" render={() => (
                     <MainPage
                         handleSelectEditResource={this.handleSelectEditResource}
+                        handleFilterTerm={this.handleFilterTerm}
                         toggleMenu={this.toggleMenu}
                         query={query}
                         menu={menu}
-                        filter={ evt => {this.filter(evt.target.value)} }
+                        filter={this.filter()}
                         filteredPlaces={locationsCopy}
                         listSelect={this.listSelect}
                         detailsBool={detailsBool}
-                        match={ evt => {this.match(evt.target.value)} }
+                        match={this.match}
                     />
                 )}/>
                 <Route exact path="/add-resource" render={()=> (

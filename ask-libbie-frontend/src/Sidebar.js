@@ -20,7 +20,7 @@ export class Sidebar extends Component {
                 type="text"
                 name="Filter Locations"
                 value={query}
-                onChange={filter}
+                onChange={(e)=>this.props.handleFilterTerm(e.target.value)}
                 placeholder="Filter Locations"
                 className="search"
             />
