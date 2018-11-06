@@ -13,7 +13,7 @@ class MainPage extends Component {
     }
 
     render() {
-        const { query, menu, toggleMenu, filter, filteredPlaces, listSelect, detailsBool, match } = this.props;
+        const { query, menu, toggleMenu, filter, filteredPlaces, listSelect, detailsBool, detailsID } = this.props;
         return (
             <div className="App">
                 <MainHeader toggleMenu={toggleMenu} />
@@ -28,7 +28,7 @@ class MainPage extends Component {
                             filteredPlaces={filteredPlaces}
                             listSelect={listSelect}
                             detailsBool={detailsBool}
-                            match={match}
+                            detailsID={detailsID}
                         />
                     }
                 </main>
