@@ -71,7 +71,7 @@ import Header from './Header';
                           className="form-input"
                           id="website" 
                           name="website" 
-                          type="text"  
+                          type="url"  
                           placeholder="Website" 
                           onChange={(e) => this.props.handleNewResourceChange(e)} 
                       />
@@ -93,7 +93,7 @@ import Header from './Header';
                           className="form-input"
                           id="phone" 
                           name="phone" 
-                          type="text"  
+                          type="tel"  
                           placeholder="Phone" 
                           onChange={(e) => this.props.handleNewResourceChange(e)} 
                       />
